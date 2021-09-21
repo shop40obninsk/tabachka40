@@ -4,7 +4,7 @@ from telebot import types
 from os import walk
 
 token="1935203076:AAGJCRpiNJK2yMsv_V7tiDy4IlRVQ_yVPeA"
-base_path="D:/DAN/catalog/"
+base_path="catalog/"
 table_path="main.xlsx"
 table="main"
 electronic=base_path+"Электронные сигареты/"

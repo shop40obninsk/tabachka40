@@ -10,7 +10,7 @@ table="main"
 electronic=base_path+"Электронные сигареты/"
 delivery=["Москва","Обнинск","РАНХиГС","РЭУ","РНИМУ","Бауманка"]
 dan_id=1588645954
-#dan_id=808525546 степан id
+dan_id=808525546 #степан id
 
 
 def append_in_xlsx(path,table_name,row):

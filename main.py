@@ -3,14 +3,14 @@ import telebot
 from telebot import types
 from os import walk
 
-token="1935203076:AAGJCRpiNJK2yMsv_V7tiDy4IlRVQ_yVPeA"
+token="1986086924:AAFNbyaH3lHwpIu9H_a_LmOEuqlrIrdKU8M"
 base_path="catalog/"
 table_path="main.xlsx"
 table="main"
 electronic=base_path+"Электронные сигареты/"
 delivery=["Москва","Обнинск","РАНХиГС","РЭУ","РНИМУ","Бауманка"]
 dan_id=1588645954
-#dan_id=808525546 #степан id
+doctors_id=808525546 #степан id
 
 
 def append_in_xlsx(path,table_name,row):
@@ -99,6 +99,10 @@ def get_message(message):
     text=message.text
     print(text,"h",message.chat.id, message.from_user.first_name)
     if "/" in text:
+        if text=="/admin_get_table" and (chat_id==dan_id or chat_id==doctors_id):
+            db=open(table_path,"rb")
+            bot.send_document(chat_id,db)
+
         command_worker(text,chat_id)
         print("/")
 
